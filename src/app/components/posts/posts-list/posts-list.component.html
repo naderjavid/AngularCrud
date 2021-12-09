@@ -1,0 +1,15 @@
+<clr-datagrid>
+  <clr-dg-column [clrDgField]="'userId'">userId</clr-dg-column>
+  <clr-dg-column [clrDgField]="'id'">id</clr-dg-column>
+  <clr-dg-column [clrDgField]="'title'">title</clr-dg-column>
+  <clr-dg-column [clrDgField]="'body'">body</clr-dg-column>
+
+  <clr-dg-row *clrDgItems="let item of posts">
+      <clr-dg-cell>{{item.userId}}</clr-dg-cell>
+      <clr-dg-cell>{{item.id}}</clr-dg-cell>
+      <clr-dg-cell>{{item.title}}</clr-dg-cell>
+      <clr-dg-cell>{{item.body}}</clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{posts.length}} posts</clr-dg-footer>
+</clr-datagrid>
